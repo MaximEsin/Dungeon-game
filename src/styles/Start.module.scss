@@ -1,0 +1,35 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(91, 99, 102, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.img {
+  height: 600px;
+}
+
+.btn {
+  position: absolute;
+  top: 500px;
+  left: 390px;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(204, 76, 51, 255);
+  color: rgba(255, 253, 154, 255);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}

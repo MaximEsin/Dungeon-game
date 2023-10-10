@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
+import { data } from "../data/data";
 
 const saveState = (state) => {
   try {
@@ -28,7 +29,7 @@ const initialState = {
   stats: {
     health: 0,
     damage: 0,
-    money: 0,
+    coins: 0,
   },
   event: {
     main: "You are standing in front of a dungeon where as some say a great treasure is hidden. You are a brave...",
@@ -39,10 +40,29 @@ const initialState = {
     option3:
       "Rogue who uses filthy tricks and poisoned daggers to assassinate your opponents. You have average health and average damage.",
   },
+  counter: 0,
 };
 
 export const dataReducer = (state = initialState, action) => {
   switch (action.type) {
+    case "TRIGGER_EVENT": {
+      const event = data[action.counter];
+      return {
+        ...state,
+        stats: {
+          health: event[action.number - 1].health,
+          damage: event[action.number - 1].damage,
+          coins: event[action.number - 1].coins,
+        },
+        event: {
+          main: event[action.number - 1].main,
+          option1: event[action.number - 1].option1,
+          option2: event[action.number - 1].option2,
+          option3: event[action.number - 1].option3,
+        },
+        counter: state.counter + 1,
+      };
+    }
     default:
       return state;
   }

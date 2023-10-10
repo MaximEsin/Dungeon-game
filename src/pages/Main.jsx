@@ -7,18 +7,23 @@ import Stats from "../components/Stats";
 import Modal from "../components/Modal";
 
 const Main = ({ active, setActive }) => {
-  const { event } = useSelector((state) => state.dataReducer);
+  const { event, counter } = useSelector((state) => state.dataReducer);
   useEffect(() => {
     setActive(true);
   }, []);
+
+  useEffect(() => {
+    setActive(true);
+  }, [counter]);
+
   return (
     <section className={styles.main__section}>
       <Modal active={active} setActive={setActive} text={event.main} />
       <div className={styles.main__container}>
         <Stats />
-        <Card text={event.option1} />
-        <Card text={event.option2} />
-        <Card text={event.option3} />
+        <Card text={event.option1} number="1" counter={counter} />
+        <Card text={event.option2} number="2" counter={counter} />
+        <Card text={event.option3} number="3" counter={counter} />
       </div>
       <img src={torch} alt="Torch" className={styles.main__torch} />
     </section>

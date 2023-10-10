@@ -18,7 +18,7 @@ const Stats = () => {
         <img src={dmg} alt="Damage" className={styles.stats__img} />
       </div>
       <div className={styles.stats__itemContainer}>
-        <p className={styles.stats__text}>Coins: {stats.money}</p>
+        <p className={styles.stats__text}>Coins: {stats.coins}</p>
         <img src={coins} alt="Coins" className={styles.stats__img} />
       </div>
     </div>

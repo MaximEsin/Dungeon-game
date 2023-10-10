@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./Modal.module.scss";
 
-const Modal = ({ active, setActive }) => {
+const Modal = ({ active, setActive, text }) => {
   const isOpen = active;
 
   useEffect(() => {
@@ -29,12 +29,7 @@ const Modal = ({ active, setActive }) => {
       }}
     >
       <section className={styles.modal}>
-        <p className={styles.modal__text}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          maiores voluptates id eaque, consectetur aspernatur exercitationem.
-          Animi quos distinctio eligendi cumque, dolor repellendus deserunt,
-          dolore, ut sint hic sunt. Sunt.
-        </p>
+        <p className={styles.modal__text}>{text}</p>
         <button onClick={() => setActive(false)} className={styles.modal__btn}>
           Continue
         </button>

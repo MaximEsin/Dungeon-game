@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../styles/Main.module.scss";
 import torch from "../images/Torch.gif";
 import Card from "../components/Card";
@@ -6,6 +6,9 @@ import Stats from "../components/Stats";
 import Modal from "../components/Modal";
 
 const Main = ({ active, setActive }) => {
+  useEffect(() => {
+    setActive(true);
+  }, []);
   return (
     <section className={styles.main__section}>
       <Modal active={active} setActive={setActive} />

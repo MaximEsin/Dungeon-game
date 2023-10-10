@@ -29,7 +29,15 @@ const Modal = ({ active, setActive }) => {
       }}
     >
       <section className={styles.modal}>
-        <div className={styles.cross} onClick={setActive(false)} />
+        <p className={styles.modal__text}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          maiores voluptates id eaque, consectetur aspernatur exercitationem.
+          Animi quos distinctio eligendi cumque, dolor repellendus deserunt,
+          dolore, ut sint hic sunt. Sunt.
+        </p>
+        <button onClick={() => setActive(false)} className={styles.modal__btn}>
+          Continue
+        </button>
       </section>
     </div>
   );

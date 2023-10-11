@@ -5,7 +5,6 @@ import { triggerEvent } from "../services/actions";
 
 const Card = ({ text, img, number, counter }) => {
   const dispatch = useDispatch();
-  console.log(img);
   return (
     <div className={styles.card}>
       <p className={styles.card__text}>{text}</p>

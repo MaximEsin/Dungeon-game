@@ -31,7 +31,7 @@ const persistedStore = loadState();
 
 const initialState = {
   stats: {
-    health: 0,
+    health: 1,
     damage: 0,
     coins: 0,
   },
@@ -55,18 +55,31 @@ export const dataReducer = (state = initialState, action) => {
   switch (action.type) {
     case "TRIGGER_EVENT": {
       const event = data[action.counter];
+      if (event[action.number - 1].death) {
+        return {
+          ...state,
+          stats: {
+            health: 0,
+          },
+        };
+      }
+
       return {
         ...state,
         stats: {
-          health: event[action.number - 1].health,
-          damage: event[action.number - 1].damage,
-          coins: event[action.number - 1].coins,
+          health: state.stats.health + event[action.number - 1].health,
+          damage: state.stats.damage + event[action.number - 1].damage,
+          coins: state.stats.coins + event[action.number - 1].coins,
         },
         event: {
           main: event[action.number - 1].main,
+          mainImg: event[action.number - 1].mainImg,
           option1: event[action.number - 1].option1,
+          img1: event[action.number - 1].img1,
           option2: event[action.number - 1].option2,
+          img2: event[action.number - 1].img2,
           option3: event[action.number - 1].option3,
+          img3: event[action.number - 1].img3,
         },
         counter: state.counter + 1,
       };

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import styles from "../styles/Main.module.scss";
 import torch from "../images/Torch.gif";
 import Card from "../components/Card";
@@ -7,7 +8,8 @@ import Stats from "../components/Stats";
 import Modal from "../components/Modal";
 
 const Main = ({ active, setActive }) => {
-  const { event, counter } = useSelector((state) => state.dataReducer);
+  const navigate = useNavigate();
+  const { event, counter, stats } = useSelector((state) => state.dataReducer);
   useEffect(() => {
     setActive(true);
   }, []);
@@ -15,6 +17,13 @@ const Main = ({ active, setActive }) => {
   useEffect(() => {
     setActive(true);
   }, [counter]);
+
+  useEffect(() => {
+    if (stats.health === 0) {
+      console.log("lallal");
+      navigate("/dead", { replace: true });
+    }
+  }, [stats]);
 
   return (
     <section className={styles.main__section}>

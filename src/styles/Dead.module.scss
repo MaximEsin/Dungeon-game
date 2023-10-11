@@ -1,0 +1,23 @@
+.dead {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &__text {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+  }
+
+  &__span {
+    color: red;
+    font-size: 30px;
+  }
+}

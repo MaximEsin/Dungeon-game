@@ -21,9 +21,24 @@ const Main = ({ active, setActive }) => {
       <Modal active={active} setActive={setActive} text={event.main} />
       <div className={styles.main__container}>
         <Stats />
-        <Card text={event.option1} number="1" counter={counter} />
-        <Card text={event.option2} number="2" counter={counter} />
-        <Card text={event.option3} number="3" counter={counter} />
+        <Card
+          text={event.option1}
+          img={event.img1}
+          number="1"
+          counter={counter}
+        />
+        <Card
+          text={event.option2}
+          img={event.img2}
+          number="2"
+          counter={counter}
+        />
+        <Card
+          text={event.option3}
+          img={event.img3}
+          number="3"
+          counter={counter}
+        />
       </div>
       <img src={torch} alt="Torch" className={styles.main__torch} />
     </section>

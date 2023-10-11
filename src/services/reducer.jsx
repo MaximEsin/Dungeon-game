@@ -3,6 +3,9 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { data } from "../data/data";
+import warrior from "../images/Warior.png";
+import wizzard from "../images/Wizzard.png";
+import rogue from "../images/Rouge.png";
 
 const saveState = (state) => {
   try {
@@ -35,10 +38,13 @@ const initialState = {
     main: "You are standing in front of a dungeon where as some say a great treasure is hidden. You are a brave...",
     option1:
       "Wizard who uses mighty spells to atack your opponents. You have low health, but insane damage.",
+    img1: wizzard,
     option2:
       "Warrior who uses sword to slay your opponents and a shield to protect yourself. You have high health, but low damage.",
+    img2: warrior,
     option3:
       "Rogue who uses filthy tricks and poisoned daggers to assassinate your opponents. You have average health and average damage.",
+    img3: rogue,
   },
   counter: 0,
 };

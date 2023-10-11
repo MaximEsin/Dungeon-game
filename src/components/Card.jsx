@@ -3,11 +3,13 @@ import styles from "./Card.module.scss";
 import { useDispatch } from "react-redux";
 import { triggerEvent } from "../services/actions";
 
-const Card = ({ text, number, counter }) => {
+const Card = ({ text, img, number, counter }) => {
   const dispatch = useDispatch();
+  console.log(img);
   return (
     <div className={styles.card}>
       <p className={styles.card__text}>{text}</p>
+      <img src={img} alt="Card image" className={styles.card__img} />
       <button
         onClick={() => dispatch(triggerEvent(number, counter))}
         className={styles.card__btn}

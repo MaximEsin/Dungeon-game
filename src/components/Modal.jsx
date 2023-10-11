@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./Modal.module.scss";
 
-const Modal = ({ active, setActive, text }) => {
+const Modal = ({ active, setActive, text, img }) => {
   const isOpen = active;
 
   useEffect(() => {
@@ -30,6 +30,7 @@ const Modal = ({ active, setActive, text }) => {
     >
       <section className={styles.modal}>
         <p className={styles.modal__text}>{text}</p>
+        <img src={img} alt="Modal image" className={styles.modal__img} />
         <button onClick={() => setActive(false)} className={styles.modal__btn}>
           Continue
         </button>

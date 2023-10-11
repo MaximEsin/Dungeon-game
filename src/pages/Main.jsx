@@ -18,7 +18,12 @@ const Main = ({ active, setActive }) => {
 
   return (
     <section className={styles.main__section}>
-      <Modal active={active} setActive={setActive} text={event.main} />
+      <Modal
+        active={active}
+        setActive={setActive}
+        text={event.main}
+        img={event.mainImg}
+      />
       <div className={styles.main__container}>
         <Stats />
         <Card

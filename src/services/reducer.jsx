@@ -6,6 +6,7 @@ import { data } from "../data/data";
 import warrior from "../images/Warior.png";
 import wizzard from "../images/Wizzard.png";
 import rogue from "../images/Rouge.png";
+import map from "../images/map.png";
 
 const saveState = (state) => {
   try {
@@ -36,6 +37,7 @@ const initialState = {
   },
   event: {
     main: "You are standing in front of a dungeon where as some say a great treasure is hidden. You are a brave...",
+    mainImg: map,
     option1:
       "Wizard who uses mighty spells to atack your opponents. You have low health, but insane damage.",
     img1: wizzard,

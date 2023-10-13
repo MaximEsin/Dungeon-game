@@ -8,7 +8,7 @@ import orc from "../images/Ork.png";
 import stealth from "../images/BackStab.png";
 import dead from "../images/Dead.png";
 import cash from "../images/CashGain.png";
-import meditate from "../images/Meditate.png";
+import hydra from "../images/Hidra.png";
 import altar from "../images/Altar.png";
 
 export const data = [
@@ -146,6 +146,51 @@ export const data = [
       damage: 0,
       coins: 0,
       death: true,
+    },
+  ],
+  /* 4 choice */
+  [
+    /* Option 1 */
+    {
+      main: "When you leave this room you feel despair. While you stood before the altar you felt a lot more reliefed. Now you meet a giant Hydra.",
+      mainImg: hydra,
+      option1: "Try to cut one of her heads.",
+      img1: atack1,
+      option2: "Try to speak with her.",
+      img2: hydra,
+      option3: "Run back",
+      img3: run,
+      health: 10,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 2 */
+    {
+      main: "You feel a bit better now, when you enter next room you see a gian hydra.",
+      mainImg: hydra,
+      option1: "Try to cut one of her heads.",
+      img1: atack1,
+      option2: "Try to speak with her.",
+      img2: hydra,
+      option3: "Run back",
+      img3: run,
+      health: 5,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 3 */
+    {
+      main: "When you leave this room you feel despair. While you stood before the altar you felt a lot more reliefed. Now you meet a giant Hydra.",
+      mainImg: hydra,
+      option1: "Try to cut one of her heads.",
+      img1: atack1,
+      option2: "Try to speak with her.",
+      img2: hydra,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
     },
   ],
 ];

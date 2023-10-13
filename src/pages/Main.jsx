@@ -16,6 +16,9 @@ const Main = ({ active, setActive }) => {
 
   useEffect(() => {
     setActive(true);
+    if (counter > 8) {
+      navigate("/win", { replace: true });
+    }
   }, [counter]);
 
   useEffect(() => {
@@ -23,6 +26,8 @@ const Main = ({ active, setActive }) => {
       navigate("/dead", { replace: true });
     }
   }, [stats]);
+
+  console.log(counter);
 
   return (
     <section className={styles.main__section}>

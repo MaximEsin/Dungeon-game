@@ -14,6 +14,8 @@ import shop from "../images/Shop.png";
 import food from "../images/food.png";
 import sword from "../images/Sword.png";
 import minotaur from "../images/Minotaur.png";
+import spider from "../images/Spider1.png";
+import king from "../images/Overlord.png";
 
 export const data = [
   /* 1 choice */
@@ -252,7 +254,7 @@ export const data = [
       mainImg: minotaur,
       option1: "Atack it",
       img1: atack1,
-      option2: "Try to hide and then quitly crawl to the next room.",
+      option2: "Try to hide and then quietly crawl to the next room.",
       img2: minotaur,
       option3: "Run back",
       img3: run,
@@ -287,6 +289,144 @@ export const data = [
       health: 0,
       damage: 0,
       coins: 0,
+    },
+  ],
+  /* 7 choice */
+  [
+    /* Option 1 */
+    {
+      main: "You fight for quite a while before you finally strike down this foul beast. As you go further you see a small spider",
+      mainImg: spider,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: spider,
+      option3: "Run back",
+      img3: run,
+      health: -10,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 2 */
+    {
+      main: "You have managed to hide and passed by this beast undamaged. As you go further you see a small spider",
+      mainImg: spider,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: spider,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 3 */
+    {
+      main: "You have managed to hide and passed by this beast undamaged. As you go further you see a small spider",
+      mainImg: spider,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: spider,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+      death: true,
+    },
+  ],
+  /* 8 choice */
+  [
+    /* Option 1 */
+    {
+      main: "You have killed this spider, but he never fought back. Now you meet the king of the dead and he is holding a chest with the treasuers you are looking for.",
+      mainImg: king,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: king,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 2 */
+    {
+      main: "Spider said to you that the weakest point of the king is his neck. As you go further you meet the king of the dead and he is holding a chest with the treasuers you are looking for.",
+      mainImg: king,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: king,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 10,
+      coins: 0,
+    },
+    /* Option 3 */
+    {
+      main: "You meet the king",
+      mainImg: spider,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: spider,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+      death: true,
+    },
+  ],
+  /* 9 choice */
+  [
+    /* Option 1 */
+    {
+      main: "You have killed the king!",
+      mainImg: king,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: king,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 2 */
+    {
+      main: "Spider said to you that the weakest point of the king is his neck. As you go further you meet the king of the dead and he is holding a chest with the treasuers you are looking for.",
+      mainImg: king,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: king,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 10,
+      coins: 0,
+    },
+    /* Option 3 */
+    {
+      main: "You meet the king",
+      mainImg: spider,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Speak with it",
+      img2: spider,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+      death: true,
     },
   ],
 ];

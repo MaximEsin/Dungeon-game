@@ -85,7 +85,6 @@ export const dataReducer = (state = initialState, action) => {
       };
     }
     case "RESTART_GAME": {
-      console.log(initialState);
       return {
         ...state,
         stats: {

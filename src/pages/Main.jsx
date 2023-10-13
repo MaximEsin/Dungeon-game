@@ -24,8 +24,6 @@ const Main = ({ active, setActive }) => {
     }
   }, [stats]);
 
-  console.log(stats);
-
   return (
     <section className={styles.main__section}>
       <Modal

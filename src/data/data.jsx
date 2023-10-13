@@ -10,6 +10,10 @@ import dead from "../images/Dead.png";
 import cash from "../images/CashGain.png";
 import hydra from "../images/Hidra.png";
 import altar from "../images/Altar.png";
+import shop from "../images/Shop.png";
+import food from "../images/food.png";
+import sword from "../images/Sword.png";
+import minotaur from "../images/Minotaur.png";
 
 export const data = [
   /* 1 choice */
@@ -186,6 +190,98 @@ export const data = [
       img1: atack1,
       option2: "Try to speak with her.",
       img2: hydra,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 0,
+      coins: 0,
+    },
+  ],
+  /* 5 choice */
+  [
+    /* Option 1 */
+    {
+      main: "You cut 1 of her heads, but 2 new instantly grow up. you fight as hard as you can and finally manage to strike her heart. After looting the room you find some coins and see a strange dude near a strange shop.",
+      mainImg: shop,
+      option1: "Buy some food for 5 coins",
+      img1: food,
+      option2: "Buy new epic weapon for 15 coins",
+      img2: sword,
+      option3: "Never speak to this dude and carry on your journey.",
+      img3: way,
+      health: 10,
+      damage: 0,
+      coins: 11,
+    },
+    /* Option 2 */
+    {
+      main: "You cut 1 of her heads, but 2 new instantly grow up. you fight as hard as you can and finally manage to cut strike her heart. After looting the room you find some coins and see a strange dude near a strange shop.",
+      mainImg: shop,
+      option1: "Buy some food for 5 coins",
+      img1: food,
+      option2: "Buy new epic weapon for 15 coins",
+      img2: sword,
+      option3: "Never speak to this dude and carry on your journey.",
+      img3: way,
+      health: 10,
+      damage: 0,
+      coins: 11,
+      death: true,
+    },
+    /* Option 3 */
+    {
+      main: "You cut 1 of her heads, but 2 new instantly grow up. you fight as hard as you can and finally manage to cut strike her heart. After looting the room you find some coins and see a strange dude near a strange shop.",
+      mainImg: shop,
+      option1: "Buy some food for 5 coins",
+      img1: food,
+      option2: "Buy new epic weapon for 15 coins",
+      img2: sword,
+      option3: "Never speak to this dude and carry on your journey.",
+      img3: way,
+      health: 10,
+      damage: 0,
+      coins: 11,
+      death: true,
+    },
+  ],
+  /* 6 choice */
+  [
+    /* Option 1 */
+    {
+      main: "You feel a lot better after having a quick meal. Just as you enter the next room you hear a bull nearby. When you look at it, it appears to be a minotaur.",
+      mainImg: minotaur,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Try to hide and then quitly crawl to the next room.",
+      img2: minotaur,
+      option3: "Run back",
+      img3: run,
+      health: 10,
+      damage: 0,
+      coins: -5,
+    },
+    /* Option 2 */
+    {
+      main: "Just as you enter the next room you hear a bull nearby. When you look at it, it appears to be a minotaur.",
+      mainImg: minotaur,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Try to hide and then quietly crawl to the next room.",
+      img2: minotaur,
+      option3: "Run back",
+      img3: run,
+      health: 0,
+      damage: 5,
+      coins: -15,
+    },
+    /* Option 3 */
+    {
+      main: "Just as you enter the next room you hear a bull nearby. When you look at it, it appears to be a minotaur.",
+      mainImg: minotaur,
+      option1: "Atack it",
+      img1: atack1,
+      option2: "Try to hide and then quietly crawl to the next room.",
+      img2: minotaur,
       option3: "Run back",
       img3: run,
       health: 0,

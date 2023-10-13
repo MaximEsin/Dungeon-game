@@ -20,10 +20,11 @@ const Main = ({ active, setActive }) => {
 
   useEffect(() => {
     if (stats.health === 0) {
-      console.log("lallal");
       navigate("/dead", { replace: true });
     }
   }, [stats]);
+
+  console.log(stats);
 
   return (
     <section className={styles.main__section}>

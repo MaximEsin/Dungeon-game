@@ -84,6 +84,19 @@ export const dataReducer = (state = initialState, action) => {
         counter: state.counter + 1,
       };
     }
+    case "RESTART_GAME": {
+      console.log(initialState);
+      return {
+        ...state,
+        stats: {
+          health: 1,
+          damage: 0,
+          coins: 0,
+        },
+        event: initialState.event,
+        counter: initialState.counter,
+      };
+    }
     default:
       return state;
   }

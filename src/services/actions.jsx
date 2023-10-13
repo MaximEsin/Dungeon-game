@@ -7,3 +7,11 @@ export function triggerEvent(number, counter) {
     });
   };
 }
+
+export function restartGame() {
+  return function (dispatch) {
+    dispatch({
+      type: "RESTART_GAME",
+    });
+  };
+}

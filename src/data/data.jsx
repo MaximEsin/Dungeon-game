@@ -6,6 +6,10 @@ import ritual from "../images/Ritual.png";
 import skull from "../images/Skull.png";
 import orc from "../images/Ork.png";
 import stealth from "../images/BackStab.png";
+import dead from "../images/Dead.png";
+import cash from "../images/CashGain.png";
+import meditate from "../images/Meditate.png";
+import altar from "../images/Altar.png";
 
 export const data = [
   /* 1 choice */
@@ -102,46 +106,46 @@ export const data = [
   [
     /* Option 1 */
     {
+      main: "You strongly regret that you chose this, because your opponent strikes you before you even understand what is going on. You try to run as fast as you can further on. You don't hear anything anymore and see an altar in the middel of a room.",
+      mainImg: atack1,
+      option1: "Touch the altar",
+      img1: altar,
+      option2: "Read a book that is on the altar.",
+      img2: altar,
+      option3: "Go further.",
+      img3: way,
+      health: -10,
+      damage: 0,
+      coins: 0,
+    },
+    /* Option 2 */
+    {
+      main: "You strike down this monster, but he also atacked you. You have searched the whole room for bounty and found 4 golden coins. As you go further you meet an altar.",
+      mainImg: cash,
+      option1: "Touch the altar",
+      img1: altar,
+      option2: "Read a book that is on the altar.",
+      img2: altar,
+      option3: "Go further.",
+      img3: way,
+      health: -5,
+      damage: 0,
+      coins: 4,
+    },
+    /* Option 3 */
+    {
       main: "You strongly regret that you chose this, because your opponent strikes you before you even understand what is going on.",
-      mainImg: orc,
-      option1: "Atack ork quitely and stealthy",
-      img1: stealth,
-      option2: "Atack ork",
-      img2: atack1,
-      option3: "Run back",
-      img3: run,
+      mainImg: dead,
+      option1: "You died",
+      img1: dead,
+      option2: "You died",
+      img2: dead,
+      option3: "You died",
+      img3: dead,
       health: 0,
       damage: 0,
       coins: 0,
       death: true,
-    },
-    /* Option 2 */
-    {
-      main: "piss",
-      mainImg: skull,
-      option1: "Listen to him",
-      img1: skull,
-      option2: "Atack skull",
-      img2: atack1,
-      option3: "Run back",
-      img3: run,
-      health: 0,
-      damage: 0,
-      coins: 0,
-    },
-    /* Option 3 */
-    {
-      main: "fuck you",
-      mainImg: cultists,
-      option1: "Complete the ritual",
-      img1: ritual,
-      option2: "Atack cultists",
-      img2: atack1,
-      option3: "Run back",
-      img3: run,
-      health: 0,
-      damage: 0,
-      coins: 0,
     },
   ],
 ];
